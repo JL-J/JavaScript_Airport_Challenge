@@ -16,7 +16,11 @@ Plane.prototype.land = function() {
 };
 
 Plane.prototype.takeoff = function() {
+  if (this.isStormy()) {
+    throw "Can not takeoff: Adverse weather conditions";
+  } else {
   this._isLanded = !(this._isLanded);
+  }
 };
 
 Plane.prototype.isStormy = function() {

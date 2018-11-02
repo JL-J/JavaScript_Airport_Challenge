@@ -27,6 +27,9 @@ describe ('Plane', function() {
     it("can not land when the weather is stormy", function() {
       expect(function() {plane.land();}).toThrow("Can not land: Adverse weather conditions");
     });
+    it("can not takeoff when the weather is stormy", function() {
+      expect(function() {plane.takeoff();}).toThrow("Can not takeoff: Adverse weather conditions");
+    });
   });
 
 })
