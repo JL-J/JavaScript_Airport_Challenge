@@ -4,5 +4,5 @@ function Airport(capacity = 5) {
 };
 
 Airport.prototype.isFull = function() {
-  return (this.hanger.length === this.capacity) 
+  return (this.hanger.length === this.capacity)
 };

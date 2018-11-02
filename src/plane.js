@@ -7,9 +7,11 @@ Plane.prototype.isLanded = function() {
   return this._isLanded;
 };
 
-Plane.prototype.land = function() {
+Plane.prototype.land = function(airport) {
   if (this.isStormy()) {
     throw "Can not land: Adverse weather conditions";
+  } else if (airport.isFull()) {
+    throw "Can not land: Airport is full";
   } else {
   this._isLanded = !(this._isLanded);
   }
