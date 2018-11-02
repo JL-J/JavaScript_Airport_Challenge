@@ -2,8 +2,8 @@ function Weather() {
 
 };
 
-Weather.prototype.generate = function() {
-  typesOfWeather = ['sunny', 'stormy']
-  answer = typesOfWeather[Math.floor(Math.random() * typesOfWeather.length)];
-  return answer.toString();
+Weather.prototype.isStormy = function() {
+  isWeatherStormy = [true, false]
+  answer = isWeatherStormy[Math.floor(Math.random() * isWeatherStormy.length)];
+  return answer;
 };

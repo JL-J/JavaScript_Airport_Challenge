@@ -3,13 +3,13 @@ describe ('Weather', function() {
   var weather = new Weather
 
   describe('generate', function() {
-    it("can return sunny", function() {
-      spyOn(weather, 'generate').and.returnValue('sunny')
-      expect(weather.generate()).toEqual('sunny');
+    it("can return false if the weather is sunny", function() {
+      spyOn(weather, 'isStormy').and.returnValue(false)
+      expect(weather.isStormy()).toEqual(false);
     });
-    it("can return stormy", function() {
-      spyOn(weather, 'generate').and.returnValue('stormy')
-      expect(weather.generate()).toEqual('stormy');
+    it("can return true if the weather is stormy", function() {
+      spyOn(weather, 'isStormy').and.returnValue(true)
+      expect(weather.isStormy()).toEqual(true);
     });
   });
 
